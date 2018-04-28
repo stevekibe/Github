@@ -1,3 +1,10 @@
 .steve{
     background: url('assets/Images/wp-image-142994963.jpg') no-repeat center center fixed;
+    color: white;
+}
+.halo{
+    text-align: center;
+}
+#htp{
+    text-align: center;
 }
