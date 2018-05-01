@@ -1,5 +1,5 @@
 <div class="steve">
-  <div class="container">
+  <div class="container-fluid">
   <br><br><br><br><br>
  <h1 id="htp">GITHUB SEARCH</h1>
  <hr>
@@ -9,19 +9,31 @@
  <div *ngIf="profile">
     <div class="panel panel-default">
       <div class="panel-heading">
-      {{profile.name}} <small>({{profile.login}})</small>
+      Profile Name: <small>{{profile.name}}</small> User Name:<small>{{profile.login}}</small>
     </div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-3">
           <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="profile Image"> 
         </div>
-        <div class="col-md-5">\
+        <div class="col-sm-4">
           <div>
             <p>
               <span class="label label-success" >{{profile.followers}} Followers</span>
               <span class="label label-info" > Following {{profile.following}}</span>
+              <span class="label label-default">{{profile.public_repos}} public Repos</span>
             </p>
+            <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success">Go to Github Page</a></p>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="panel  panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title">Repos</h2>
+            </div>
+            <div class="panel-body" *ngFor= "let repo of repos">
+              
+            </div>
           </div>
         </div>
       </div>
