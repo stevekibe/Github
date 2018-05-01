@@ -1,5 +1,6 @@
 <div class="steve">
-  <div class="container-fluid">
+
+  <div class="container">
   <br><br><br><br><br>
  <h1 id="htp">GITHUB SEARCH</h1>
  <hr>
@@ -7,6 +8,11 @@
  <img src="assets/Images/download.png">
  <br><br><br>
  <div *ngIf="profile">
+   <form action="" class="Search-form">
+     <div class="form-group">
+       <input type="text" class="form-control" placeholder="Search username Here">
+     </div>
+   </form>
     <div class="panel panel-default">
       <div class="panel-heading">
       Profile Name: <small>{{profile.name}}</small> User Name:<small>{{profile.login}}</small>
@@ -31,8 +37,12 @@
             <div class="panel-heading">
               <h2 class="panel-title">Repos</h2>
             </div>
-            <div class="panel-body" *ngFor= "let repo of repos">
-              
+            <div class="panel-body" *ngFor = "let repo of repos">
+              <p>
+                {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-info pull-right">View Repo On Github</a>
+
+              </p>
+              <p>{{repo.description}}</p>
             </div>
           </div>
         </div>

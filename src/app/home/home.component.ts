@@ -10,9 +10,13 @@ export class HomeComponent implements OnInit {
 
    profile:any[];
    repos: any[];
+   username: string;
    
   constructor(private gitserchService : GitsearchService){
-    this.gitserchService.getProfileData().subscribe(profile => {
+
+  
+
+  this.gitserchService.getProfileData().subscribe(profile => {
     console.log(profile);
     this.profile = profile;
 
@@ -24,6 +28,7 @@ export class HomeComponent implements OnInit {
 
 
   }
+  
 
   ngOnInit() {
   }

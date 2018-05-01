@@ -20,6 +20,7 @@ import { GitsearchService } from './gitsearch.service';
     BrowserModule,
     HttpModule,
     
+    
   ],
   providers: [GitsearchService],
   bootstrap: [AppComponent]
