@@ -13,8 +13,13 @@ export class GitsearchService {
     this.username = 'stevekibe';
    }
 
-   gitProfileData(){
+   getProfileData(){
      return this.http.get("https://api.github.com/users/stevekibe ", + "?client_id="+ this.clientid + "&client_secret"+ this.clientsecret).map(res => res.json());
+   }
+
+   getProfileRepos(){
+    return this.http.get("https://api.github.com/users/stevekibe ", + "/repos?client_id="+ this.clientid + "&client_secret"+ this.clientsecret).map(res => res.json());
+
    }
 
 

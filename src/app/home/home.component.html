@@ -1,12 +1,34 @@
 <div class="steve">
-  <div class="container-fluid">
+  <div class="container">
   <br><br><br><br><br>
  <h1 id="htp">GITHUB SEARCH</h1>
  <hr>
 <div class="halo">
  <img src="assets/Images/download.png">
  <br><br><br>
- 
+ <div *ngIf="profile">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      {{profile.name}} <small>({{profile.login}})</small>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="profile Image"> 
+        </div>
+        <div class="col-md-5">\
+          <div>
+            <p>
+              <span class="label label-success" >{{profile.followers}} Followers</span>
+              <span class="label label-info" > Following {{profile.following}}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+ </div>
  <br><br>
  </div>
 </div>

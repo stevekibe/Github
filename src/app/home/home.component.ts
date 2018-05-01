@@ -7,11 +7,20 @@ import { GitsearchService } from '../gitsearch.service';
   styleUrls: ['./home.component.css']
 }) 
 export class HomeComponent implements OnInit {
+
+   profile:any[];
+   repos: any[];
    
   constructor(private gitserchService : GitsearchService){
-    this.gitserchService.gitProfileData().subscribe(profile=> {
-    console.log("")
+    this.gitserchService.getProfileData().subscribe(profile => {
+    console.log(profile);
+    this.profile = profile;
+
     });
+    this.gitserchService.getProfileRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos =repos;
+    })
 
 
   }
